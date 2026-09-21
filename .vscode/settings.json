@@ -1,0 +1,5 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/_build",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "latexmk (pdf)"
+}
