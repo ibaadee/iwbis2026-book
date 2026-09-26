@@ -15,13 +15,15 @@
 \usepackage[export]{adjustbox}
 \usepackage{xurl}
 \usepackage{multirow}
+\usepackage{wrapfig}
 
 \definecolor{conf}{HTML}{023E8A}
 \titleformat{\section}{\color{conf}\Large\bfseries}{}{0em}{}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
-
+\usepackage{enumitem}
+\usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{tabularx}
 \usepackage{hyperref}
@@ -35,16 +37,33 @@
 }
 
 
-\usepackage[a4paper, margin=1.8cm, top=1cm, headheight=1cm, headsep=40pt, includehead]{geometry}
+\usepackage[a4paper, margin=1.8cm, top=1cm, headheight=1cm, headsep=20pt, includehead]{geometry}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 
 % --- Define the default header/footer style ---
+% \pagestyle{fancy}
+% \fancyhf{} % Clear existing defaults
+% % \rhead = top right, \lhead = top left, \chead = center
+% \rhead{\includegraphics[height=10pt]{images/iwbis_logo.png}} % image in header
+% \lhead{IWBIS 2026 | PROGRAM BOOK}
+
+% Header and footer style
 \pagestyle{fancy}
 \fancyhf{} % Clear existing defaults
-% \rhead = top right, \lhead = top left, \chead = center
-\rhead{\includegraphics[height=10pt]{images/iwbis_logo.png}} % image in header
+
+% Header
 \lhead{IWBIS 2026 | PROGRAM BOOK}
+\rhead{\includegraphics[height=10pt]{images/iwbis_logo.png}}
+
+% Footer
+\cfoot{\textcolor{conf}{\small\thepage}}
+
+% Optional: remove the default horizontal line below the header
+\renewcommand{\headrulewidth}{0pt}
+
+% Optional: add a subtle line above the footer
+\renewcommand{\footrulewidth}{0.4pt}
 
 \begin{document}
 
@@ -194,19 +213,28 @@
 \hspace*{2em} \textcolor{gray}{Ruang Sidang}\\
 \textbf{16:50 -- 17:35}~~Keynote 8: Prof. Andrea Acquaviva -- online\\
 \hspace*{2em}\textcolor{gray}{Auditorium Indro Suwandi}\\
-\textbf{19:00 -- 21:00}~~Gala Dinner\\
+\textbf{19:00 -- 21:00}~~Gala Dinner \& Best Paper Award\\
 \hspace*{2em}\textcolor{gray}{Selasar Auditorium, Seluruh Peserta, Award Best Paper}
 
 \section*{Day 3 -- Sunday, 18 Oct}
-\textbf{08:00 -- 09:45}~~Parallel Session 1 \emph{(Parallel)}\\
-\hspace*{2em}\textcolor{gray}{8 Kelas}\\
+\textbf{08:00 -- 09:45}~~Registration \& Opening \emph{(Parallel)}\\
+\hspace*{2em}\textcolor{gray}{Ruang Sidang Lt. 4}\\
 \textbf{09:45 -- 10:00}~~Coffee Break\\
 \hspace*{2em}\textcolor{gray}{Selasar Auditorium}\\
-\textbf{10:00 -- 11:45}~~Parallel Session 2 \emph{(Parallel)}\\
-\hspace*{2em}\textcolor{gray}{8 Kelas Paralel}\\
+\textbf{10:00 -- 11:45}~~Parallel Sessions \emph{(Parallel)}\\
+\hspace*{2em}\textcolor{gray}{3 classroom}\\
 \textbf{11:45 -- 12:45}~~Break\\
-\textbf{12:45 -- 17:30}~~Break\\
-\textbf{17:30 -- 18:00}~~Closing \& Award -- Best Presenter
+\textbf{12:45 -- 13:30}~~Keynote 1: Prof. Subhas \emph{(Parallel)}\\
+\hspace*{2em}\textcolor{gray}{Auditorium Indro Suwandi}\\
+\textbf{14:15 -- 15:00}~~Keynote 1: Prof. T.M Indra Mahlia \emph{(Parallel)}\\
+\hspace*{2em}\textcolor{gray}{Auditorium Indro Suwandi}\\
+\textbf{15:00 -- 16:00}~~Coffee Break\\
+\hspace*{2em}\textcolor{gray}{Selasar Auditorium}\\
+\textbf{16:00 -- 16:45}~~Invited Speaker 1: Grafika \emph{(Online)}\\
+\hspace*{2em}\textcolor{gray}{Auditorium Indro Suwandi}\\
+\textbf{16:45 -- 17:30}~~Keynote 4: Prof. Xiao \emph{(Online)}\\
+\hspace*{2em}\textcolor{gray}{Auditorium Indro Suwandi}\\
+\textbf{17:30 -- 18:00}~~Closing \& Award (Best Presenter)
 
 \section*{Venue}
 \textbf{Auditorium Indro Suwandi, Gedung Baru FASILKOM}\\
@@ -244,13 +272,14 @@ Wisnu Jatmiko, \textcolor{gray}{Universitas Indonesia, ID}
 
 \begin{minipage}{\linewidth}
 \textbf{\color{conf}General Chair}\\
-Harry Budi Susanto, \textcolor{gray}{Universitas Indonesia, ID}\\
+Indra Budi, \textcolor{gray}{Universitas Indonesia, ID}\\
 \end{minipage}
 \vspace{0.8em}
 
 \begin{minipage}{\linewidth}
 \textbf{\color{conf}Program Chair}\\
-Baginda Anggun Nan Cenka, \textcolor{gray}{Universitas Indonesia, ID}\\
+Vektor Dewanto, \textcolor{gray}{Universitas Indonesia, ID}\\
+Ibad Rahadian Saladdin, \textcolor{gray}{Universitas Indonesia, ID}
 \end{minipage}
 \vspace{0.8em}
 
@@ -262,20 +291,20 @@ Jessica Naraiswari Arwidarasti, \textcolor{gray}{Universitas Indonesia, ID}\\
 
 \begin{minipage}{\linewidth}
 \textbf{\color{conf}Proceeding Chair}\\
-Aprinaldi, \textcolor{gray}{Universitas Indonesia, ID}\\
+Lintang Matahari Hasani, \textcolor{gray}{Universitas Indonesia, ID}\\
 \end{minipage}
 \vspace{0.8em}
 
 \begin{minipage}{\linewidth}
 \textbf{\color{conf}Treasurers}\\
-Anggitha Woelandhary, \textcolor{gray}{Universitas Indonesia, ID}\\
 Edina Ayuningtyas, \textcolor{gray}{Universitas Indonesia, ID}\\
+Nurul Fazriah, \textcolor{gray}{Universitas Indonesia, ID}\\
 \end{minipage}
 \vspace{0.8em}
 
 \begin{minipage}{\linewidth}
 \textbf{\color{conf}Local Organizing Chair}\\
-Nandhita Zefania Maharani, \textcolor{gray}{Universitas Indonesia, ID}\\
+Shabrina Salsabila Kurniawan, \textcolor{gray}{Universitas Indonesia, ID}\\
 \end{minipage}
 \vspace{0.8em}
 
@@ -284,34 +313,40 @@ Nandhita Zefania Maharani, \textcolor{gray}{Universitas Indonesia, ID}\\
 Achmad Nizar Hidayanto, \textcolor{gray}{Universitas Indonesia, ID}\\
 Alfan Farizki Wicaksono, \textcolor{gray}{Universitas Indonesia, ID}\\
 Amril Syalim, \textcolor{gray}{Universitas Indonesia, ID}\\
-Aniati Murni Arymurthy, \textcolor{gray}{Universitas Indonesia, ID}\\
+Ananto Tri Sasongko, \textcolor{gray}{Universitas Pelita Bangsa, ID}\\
+Aniruddha Singh Gautam, \textcolor{gray}{Microsoft, US}\\
+Anita Hidayati, \textcolor{gray}{Politeknik Negeri Jakarta, ID}\\
+Arfive Gandhi, \textcolor{gray}{Universitas Telkom, ID}\\
 Ari Saptawijaya, \textcolor{gray}{Universitas Indonesia, ID}\\
 Ari Wibisono, \textcolor{gray}{Universitas Indonesia, ID}\\
-Bayu Anggorojati, \textcolor{gray}{Universitas Indonesia, ID}\\
+Ario Yudo Husodo, \textcolor{gray}{Universitas Mataram, ID}\\
+Ati Suci Dian Martha, \textcolor{gray}{Telkom University, ID}\\
+Avinanta Tarigan, \textcolor{gray}{Universitas Gunadarma, ID}\\
+Berliyanto, \textcolor{gray}{Institut Teknologi Budi Utomo, ID}\\
 Betty Purwandari, \textcolor{gray}{Universitas Indonesia, ID}\\
+Bety Hayat Susanti, \textcolor{gray}{Politeknik Siber dan Sandi Negara, ID}\\
+Bayu Anggorojati, \textcolor{gray}{Monash University, ID}\\
 Dina Chahyati, \textcolor{gray}{Universitas Indonesia, ID}\\
 Erdefi Rakun, \textcolor{gray}{Universitas Indonesia, ID}\\
+Esa Prakarsa, \textcolor{gray}{National Research and Innovation Agency, ID}\\
 Evi Yulianti, \textcolor{gray}{Universitas Indonesia, ID}\\
-Fariz Darari, \textcolor{gray}{Universitas Indonesia, ID}\\
 Fatimah Azzahro, \textcolor{gray}{Universitas Indonesia, ID}\\
+Fariz Darari, \textcolor{gray}{Universitas Indonesia, ID}\\
 Ika Alfina, \textcolor{gray}{Universitas Indonesia, ID}\\
 Imairi Eitiveni, \textcolor{gray}{Universitas Indonesia, ID}\\
-Indra Budi, \textcolor{gray}{Universitas Indonesia, ID}\\
 Kurniawati Azizah, \textcolor{gray}{Universitas Indonesia, ID}\\
 Laksmita Rahadianti, \textcolor{gray}{Universitas Indonesia, ID}\\
 Lim Yohanes Stefanus, \textcolor{gray}{Universitas Indonesia, ID}\\
-Martin Schrepp, \textcolor{gray}{Universitas Indonesia, ID}\\
 Muhammad Anwar Ma'sum, \textcolor{gray}{Universitas Indonesia, ID}\\
 Muhammad Febrian Rachmadi, \textcolor{gray}{Universitas Indonesia, ID}\\
 Muhammad Okky Ibrohim, \textcolor{gray}{Universitas Indonesia, ID}\\
 Nabila Clydea Harahap, \textcolor{gray}{Universitas Indonesia, ID}\\
-Oenardi Lawanto, \textcolor{gray}{Universitas Indonesia, ID}\\
-Panca Hadi Putra, \textcolor{gray}{Universitas Indonesia, ID}\\
 Rahmad Mahendra, \textcolor{gray}{Universitas Indonesia, ID}\\
-Satrio Pradono Suryodiningrat, \textcolor{gray}{Universitas Indonesia, ID}\\
+Santosh Appachu Devanira Poovaiah, \textcolor{gray}{NVIDIA, US}\\
+Sarath Kumar Kallayil Sreedharan, \textcolor{gray}{AWS, US}\\
 Setiadi Yazid, \textcolor{gray}{Universitas Indonesia, ID}\\
-Toto Haryanto, \textcolor{gray}{Universitas Indonesia, ID}\\
-Tsukasa Hirashima, \textcolor{gray}{Universitas Indonesia, ID}\\
+Toto Haryanto, \textcolor{gray}{Institut Pertanian Bogor, ID}\\
+Vatsal Gupta, \textcolor{gray}{Apple Inc., US}\\
 Wahyu Catur Wibowo, \textcolor{gray}{Universitas Indonesia, ID}\\
 Widijanto Satyo Nugroho, \textcolor{gray}{Universitas Indonesia, ID}\\
 \end{minipage}
@@ -646,55 +681,391 @@ Muhammad Naufal Al Ghifari \textcolor{gray}{(S2 - 2025)}\\
     With his research accomplishments and dedication to nurturing the next generation of scholars, Professor T M Indra Mahlia continues to inspire and shape the field of Engineering, leaving an indelible impact on sustainable energy and environmental engineering.
 \end{minipage}
 % ======================================================================================
+
+% =============================================================
+% Keynote Speaker -- Prof. Andrea Acquaviva
+% =============================================================
 \newpage
-% --- LEFT COLUMN ---
-\large{\textbf{INVITED SPEAKER}}\\
+\large{\textbf{KEYNOTE SPEAKER}}\\
+
 \begin{minipage}[t]{0.25\textwidth}
-    \vspace{0pt}%
-    
-    \includegraphics[width=\linewidth]{images/portraits/henri_edion.png} \\[0.5em]
-    \begin{center}
-        {\textbf{ASSOC. PROF. HENRY EDION, PH.D}} \\[1em]
-        {\normalsize Docent in Software Engineering \& Senior Lecturer} \\[1em]
-        {\normalsize \textbf{Blekinge Institute of Technology Sweden}}   
-    \end{center}
+\vspace{0pt}
+
+% Replace with the confirmed portrait:
+% \includegraphics[width=\linewidth]{images/portraits/andrea_acquaviva.png}\\[0.5em]
+
+\fbox{
+    \parbox[c][4.2cm][c]{\linewidth}{
+        \centering
+        \small Portrait\\pending
+    }
+}
+
+\vspace{0.5em}
+
+\begin{center}
+{\normalsize \textbf{PROF. ANDREA ACQUAVIVA}}\\[1em]
+{\normalsize Keynote Speaker --- Online}\\[1em]
+{\normalsize \textbf{Affiliation to be confirmed}}
+\end{center}
 \end{minipage}%
 \hfill
-% --- RIGHT COLUMN ---
 \begin{minipage}[t]{0.72\textwidth}
-    \vspace{0pt}% 
-    Dr. Henry Edison is a distinguished software engineering scholar and educator at Blekinge Institute of Technology (BTH), Sweden, where he serves as a Docent in Software Engineering and Senior Lecturer within the ELLIIT Faculty. With an international academic career spanning Sweden, Denmark, Ireland, Italy, and Indonesia, he brings a broad global perspective to software engineering research, education, and innovation. He holds a PhD in Computer Science from the Free University of Bozen-Bolzano, Italy, an MSc in Software Engineering from Blekinge Institute of Technology, Sweden, and a BEng in Informatics from Institut Teknologi Bandung, Indonesia.
+\vspace{0pt}
 
-    \vspace{1em}
-    
-    His research focuses on software engineering, digital innovation, software-intensive businesses, large-scale agile development, and software startups, with particular attention to how organizations create, develop, and scale software-intensive products and businesses. His research has been conducted in close collaboration with international academic and industry partners, including organizations such as Ericsson, Fidelity Investments, F-Secure, and Blekinge Business Incubator, connecting rigorous academic inquiry with real-world challenges in the global software industry.
-    
-    \vspace{1em}
-    
-    Dr. Edison is an active contributor to the international software engineering research community. His academic service includes extensive peer-review activities, research evaluation, conference and workshop organization, and program leadership. He has reviewed more than 100 journal, conference, and workshop submissions since 2016 and has served as an expert evaluator for research applications for Indonesia’s National Research and Innovation Agency. He has also played a leading role in establishing and organizing international research forums, including founding the International Workshop on Advances in Software-Intensive Startups (AiSIS) and serving as Program Chair for the International Conference on Software Business (ICSOB) 2026.
-    
-    \vspace{1em}
-    
-    Beyond research, Dr. Edison has built a substantial international teaching and academic mentoring portfolio, having taught software engineering and information systems at universities across Europe and Indonesia since 2005. His teaching and supervision encompass software engineering, agile and lean development, DevOps, digital business, strategy and innovation, and sustainability in software engineering. Through his work with undergraduate, postgraduate, and doctoral students, he continues to contribute to the development of future researchers, technology professionals, and academic leaders.
-    
-    \vspace{1em}
-    
-    An experienced keynote and invited speaker, Dr. Edison has been invited to share his expertise at international academic and professional forums on topics including large-scale agile development, software startups, corporate innovation, digital business, and academic careers. His combination of international academic experience, industry engagement, research leadership, and long-standing contribution to software engineering education positions him as a compelling voice on the evolution of software-intensive organizations and the future of software engineering.
-    
-    \vspace{1em}
-    
-    With an academic career shaped by collaboration across countries, institutions, and industry sectors, Dr. Edison brings to the keynote stage not only scholarly expertise, but also a distinctly international and practice-oriented perspective on how software engineering continues to transform businesses, organizations, and society.
+Professor Andrea Acquaviva is scheduled to deliver an online keynote address
+at IWBIS 2026. His official academic position, institutional affiliation,
+biography, and keynote topic will be added upon confirmation.
+
+\vspace{1em}
+
+\textit{This profile is pending confirmation of the speaker's official
+biography and approved portrait.}
 \end{minipage}
-% ======================================================================================
 
+\newpage
 
-% ==================== 
-% Payment Method
+% =============================================================
+% Keynote Speaker -- Prof. Xiao
+% =============================================================
+\newpage
+\large{\textbf{KEYNOTE SPEAKER}}\\
+
+\begin{minipage}[t]{0.25\textwidth}
+\vspace{0pt}
+
+% Replace with the confirmed portrait:
+% \includegraphics[width=\linewidth]{images/portraits/prof_xiao.png}\\[0.5em]
+
+\fbox{
+    \parbox[c][4.2cm][c]{\linewidth}{
+        \centering
+        \small Portrait\\pending
+    }
+}
+
+\vspace{0.5em}
+
+\begin{center}
+{\normalsize \textbf{PROF. XIAO}}\\[1em]
+{\normalsize Keynote Speaker --- Online}\\[1em]
+{\normalsize \textbf{Full name and affiliation to be confirmed}}
+\end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.72\textwidth}
+\vspace{0pt}
+
+Professor Xiao is scheduled to deliver an online keynote address at IWBIS 2026.
+The speaker's full name, professional title, institutional affiliation,
+biography, and keynote topic will be announced after confirmation by the
+committee.
+
+\vspace{1em}
+
+\textit{This profile is pending confirmation of the speaker's official
+identity, biography, and approved portrait.}
+\end{minipage}
+
+% =============================================================
+% Invited Speaker -- Dr. Henry Edison
+% =============================================================
+\clearpage
+\large{\textbf{INVITED SPEAKER}}\\[0.6em]
+
+\begin{wrapfigure}{l}{0.27\textwidth}
+    \vspace{-0.8em}
+    \centering
+
+    \includegraphics[width=\linewidth]{images/portraits/henri_edion.png}\\[0.6em]
+
+    {\normalsize\bfseries ASSOC.\ PROF.\ HENRY EDISON, PH.D.}\\[0.8em]
+
+    {\small Docent in Software Engineering\\
+    and Senior Lecturer}\\[0.8em]
+
+    {\small\bfseries Blekinge Institute of Technology\\
+    Sweden}
+\end{wrapfigure}
+
+Dr. Henry Edison is a distinguished software engineering scholar and educator
+at Blekinge Institute of Technology (BTH), Sweden, where he serves as a Docent
+in Software Engineering and Senior Lecturer within the ELLIIT Faculty. With an
+international academic career spanning Sweden, Denmark, Ireland, Italy, and
+Indonesia, he brings a broad global perspective to software engineering
+research, education, and innovation. He holds a PhD in Computer Science from
+the Free University of Bozen-Bolzano, Italy, an MSc in Software Engineering
+from Blekinge Institute of Technology, Sweden, and a BEng in Informatics from
+Institut Teknologi Bandung, Indonesia.
+
+\vspace{1em}
+
+His research focuses on software engineering, digital innovation,
+software-intensive businesses, large-scale agile development, and software
+startups, with particular attention to how organizations create, develop, and
+scale software-intensive products and businesses. His research has been
+conducted in close collaboration with international academic and industry
+partners, including organizations such as Ericsson, Fidelity Investments,
+F-Secure, and Blekinge Business Incubator, connecting rigorous academic inquiry
+with real-world challenges in the global software industry.
+
+\vspace{1em}
+
+Dr. Edison is an active contributor to the international software engineering
+research community. His academic service includes extensive peer-review
+activities, research evaluation, conference and workshop organization, and
+program leadership. He has reviewed more than 100 journal, conference, and
+workshop submissions since 2016 and has served as an expert evaluator for
+research applications for Indonesia's National Research and Innovation Agency.
+He has also played a leading role in establishing and organizing international
+research forums, including founding the International Workshop on Advances in
+Software-Intensive Startups (AiSIS) and serving as Program Chair for the
+International Conference on Software Business (ICSOB) 2026.
+
+\vspace{1em}
+
+Beyond research, Dr. Edison has built a substantial international teaching and
+academic mentoring portfolio, having taught software engineering and information
+systems at universities across Europe and Indonesia since 2005. His teaching and
+supervision encompass software engineering, agile and lean development, DevOps,
+digital business, strategy and innovation, and sustainability in software
+engineering. Through his work with undergraduate, postgraduate, and doctoral
+students, he continues to contribute to the development of future researchers,
+technology professionals, and academic leaders.
+
+\vspace{1em}
+
+An experienced keynote and invited speaker, Dr. Edison has been invited to
+share his expertise at international academic and professional forums on topics
+including large-scale agile development, software startups, corporate innovation,
+digital business, and academic careers. His combination of international academic
+experience, industry engagement, research leadership, and long-standing
+contribution to software engineering education positions him as a compelling
+voice on the evolution of software-intensive organizations and the future of
+software engineering.
+
+\vspace{1em}
+
+With an academic career shaped by collaboration across countries, institutions,
+and industry sectors, Dr. Edison brings to the keynote stage not only scholarly
+expertise, but also a distinctly international and practice-oriented perspective
+on how software engineering continues to transform businesses, organizations,
+and society.
+
+\clearpage
+
+% =============================================================
+% IWBIS Invited Speaker -- Kamrul Hasan
+% =============================================================
+\newpage
+\large{\textbf{IWBIS INVITED SPEAKER}}\\
+
+\begin{minipage}[t]{0.25\textwidth}
+\vspace{0pt}
+
+% Replace with the confirmed portrait:
+% \includegraphics[width=\linewidth]{images/portraits/kamrul_hasan.png}\\[0.5em]
+
+\fbox{
+    \parbox[c][4.2cm][c]{\linewidth}{
+        \centering
+        \small Portrait\\pending
+    }
+}
+
+\vspace{0.5em}
+
+\begin{center}
+{\normalsize \textbf{KAMRUL HASAN}}\\[1em]
+{\normalsize Invited Speaker}\\[1em]
+{\normalsize \textbf{Affiliation to be confirmed}}
+\end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.72\textwidth}
+\vspace{0pt}
+
+Kamrul Hasan is an invited speaker for the International Workshop on Big Data
+and Information Security (IWBIS) 2026. His official professional title,
+institutional affiliation, and biography will be announced by the committee.
+
+\vspace{1em}
+
+\textit{This profile is pending confirmation of the speaker's official
+biography and approved portrait.}
+\end{minipage}
+
+% =============================================================
+% IWBIS Invited Speaker -- Grafika Jati
+% =============================================================
+\newpage
+\large{\textbf{IWBIS INVITED SPEAKER}}\\
+
+\begin{minipage}[t]{0.25\textwidth}
+\vspace{0pt}
+
+% Replace with the confirmed portrait:
+% \includegraphics[width=\linewidth]{images/portraits/grafika_jati.png}\\[0.5em]
+
+\fbox{
+    \parbox[c][4.2cm][c]{\linewidth}{
+        \centering
+        \small Portrait\\pending
+    }
+}
+
+\vspace{0.5em}
+
+\begin{center}
+{\normalsize \textbf{GRAFIKA JATI}}\\[1em]
+{\normalsize Invited Speaker --- Online}\\[1em]
+{\normalsize \textbf{Affiliation to be confirmed}}
+\end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.72\textwidth}
+\vspace{0pt}
+
+Grafika Jati is scheduled as an online invited speaker for IWBIS 2026. The
+official biography, professional title, institutional affiliation, and session
+details will be updated once confirmed by the speaker and the committee.
+
+\vspace{1em}
+
+\textit{This profile is pending confirmation of the speaker's official
+biography and approved portrait.}
+\end{minipage}
+
+% ====================
+% Registration
 % ====================
 \clearpage
-\section*{\textbf{Payment}}
+\section*{\textbf{Registration}}
 \color{conf}\rule{\linewidth}{1pt}\color{black}
-\vspace{0.5em}
+\vspace{0.8em}
+
+\subsection*{\color{conf}Registration Fee of IWBIS 2026}
+
+\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+
+\textbf{International Participants (USD)}
+
+\vspace{0.3em}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{2.0cm}
+    >{\raggedright\arraybackslash}p{1.35cm}
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}p{1.35cm}
+}
+\rowcolor{conf}
+\multicolumn{2}{c}{\color{white}\textbf{Category}} &
+\multicolumn{2}{c}{\color{white}\textbf{Presenter}} &
+\multicolumn{2}{c}{\color{white}\textbf{Student Presenter}} &
+\color{white}\textbf{Non-presenter} \\
+
+\rowcolor{lightgraybg}
+\textbf{Type} &
+\textbf{Attendance} &
+\textbf{IEEE} &
+\textbf{Non-IEEE} &
+\textbf{IEEE} &
+\textbf{Non-IEEE} &
+\\ \hline
+
+Early Bird & Virtual &
+250 & 300 & 225 & 250 & 50 \\
+
+Early Bird & On-site &
+350 & 400 & 325 & 350 & 150 \\
+
+Regular & Virtual &
+300 & 350 & 250 & 300 & 100 \\
+
+Regular & On-site &
+400 & 450 & 350 & 400 & 200 \\
+\end{tabularx}
+\end{center}
+
+\vspace{0.8em}
+
+\textbf{Domestic Participants (IDR)}
+
+\vspace{0.3em}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{2.0cm}
+    >{\raggedright\arraybackslash}p{1.35cm}
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}p{1.35cm}
+}
+\rowcolor{conf}
+\multicolumn{2}{c}{\color{white}\textbf{Category}} &
+\multicolumn{2}{c}{\color{white}\textbf{Presenter}} &
+\multicolumn{2}{c}{\color{white}\textbf{Student Presenter}} &
+\color{white}\textbf{Non-presenter} \\
+
+\rowcolor{lightgraybg}
+\textbf{Type} &
+\textbf{Attendance} &
+\textbf{IEEE} &
+\textbf{Non-IEEE} &
+\textbf{IEEE} &
+\textbf{Non-IEEE} &
+\\ \hline
+
+Early Bird & Virtual &
+Rp~2,500,000 &
+Rp~3,000,000 &
+Rp~2,250,000 &
+Rp~2,500,000 &
+Rp~500,000 \\
+
+Early Bird & On-site &
+Rp~3,500,000 &
+Rp~4,000,000 &
+Rp~3,250,000 &
+Rp~3,500,000 &
+Rp~1,500,000 \\
+
+Regular & Virtual &
+Rp~2,750,000 &
+Rp~3,500,000 &
+Rp~2,500,000 &
+Rp~3,000,000 &
+Rp~750,000 \\
+
+Regular & On-site &
+Rp~3,750,000 &
+Rp~4,500,000 &
+Rp~3,500,000 &
+Rp~4,000,000 &
+Rp~1,750,000 \\
+\end{tabularx}
+\end{center}
+
+\normalsize
+\vspace{0.7em}
+
+\begin{minipage}{\linewidth}
+\small
+\textit{IEEE member and non-IEEE member fees appear in that order. Registration fees are per paper. Conference registration includes electronic proceedings, an e-certificate, and access to the IWBIS and ICACSIS 2026 parallel sessions.}
+\end{minipage}
+
+\vspace{1.2em}
+
+\clearpage
+\subsection*{\color{conf}Payment}
 
 \begin{table}[h]
 \centering
@@ -728,15 +1099,480 @@ We do not provide printed proceeding onsite, please contact us if you need one. 
 \end{tabular}
 \end{table}
 
+\vspace{0.8em}
+
+\subsection*{\color{conf}Registration Notes}
+
+\begin{itemize}
+    \setlength{\itemsep}{0.4em}
+    \item At least one author of each accepted paper must register by \textbf{30 September 2026}.
+    \item Authors and non-presenting participants may register at:
+    \url{https://bit.ly/iwbis2026-regist}
+    \item The registration form requires a Google account.
+    \item Virtual registration is available. Details of the Zoom link or meeting ID will be distributed closer to the event.
+\end{itemize}
+
+\normalsize
 
 
-% ==================== 
-% Papers
+% ====================
+% Conference Platform
 % ====================
 \clearpage
-\section*{\textbf{Papers}}
+\section*{\textbf{Conference Platform}}
 \color{conf}\rule{\linewidth}{1pt}\color{black}
+\vspace{0.8em}
+
+\begin{minipage}{\linewidth}
+\textbf{\color{conf}ON-SITE PARTICIPATION}
+
+\vspace{0.4em}
+
+The workshop will take place at the \textbf{Faculty of Computer Science, Universitas Indonesia}. The committee will announce the session rooms together with the final program.
+
+\vspace{0.6em}
+
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{10pt}
+
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{
+    >{\raggedright\arraybackslash}p{4.3cm}
+    >{\raggedright\arraybackslash}X
+}
+\rowcolor{lightgraybg}
+\textbf{Activity} & \textbf{Venue} \\
+
+Plenary and keynote sessions &
+Auditorium Indro Suwandi \\
+
+Parallel sessions &
+Classrooms, Level 2, Zone 3; and Sidang rooms \\
+\end{tabularx}
+\end{center}
+
+\vspace{0.4em}
+
+Detailed room assignments for each session will be communicated with the final program.
+
+\end{minipage}
+
+\vspace{1.2em}
+
+\begin{minipage}{\linewidth}
+\textbf{\color{conf}VIRTUAL PARTICIPATION}
+
+\vspace{0.4em}
+
+Virtual registration is available. The conference will use the \textbf{Zoom} platform (\url{https://zoom.us}).
+
+\vspace{0.6em}
+
+\begin{itemize}
+    \setlength{\itemsep}{0.35em}
+    \item All plenary and keynote sessions will be livestreamed through Zoom.
+    \item Several invited and keynote speakers will also participate online, including the IWBIS Invited Speaker session with Grafika.
+    \item The Zoom meeting link and/or meeting ID will be shared closer to the event.
+\end{itemize}
+
+\end{minipage}
+
+% ====================
+% Technical Program
+% ====================
+\clearpage
+\section*{\textbf{Technical Program}}
+\color{conf}\rule{\linewidth}{1pt}\color{black}
+\vspace{0.6em}
+
+The detailed technical program below is scheduled for \textbf{Sunday, 18 October 2026},
+from \textbf{10:00 to 11:45 GMT+7}. Each presentation is allocated
+\textbf{20 minutes}, including 15 minutes for the presentation and 5 minutes
+for questions, answers, and transition.
+
+\vspace{0.8em}
+
+% ------------------------------------------------------------
+% Parallel Session 1
+% ------------------------------------------------------------
+\subsection*{\color{conf}Parallel Session 1: Cybersecurity \& Cryptography}
+
+\begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{3.4cm}
+    >{\raggedright\arraybackslash}X
+}
+\rowcolor{lightgraybg}
+\textbf{Time} & 10:00--11:45 GMT+7 \\
+
+\rowcolor{lightgraybg}
+\textbf{Session Chair} & TBD \\
+
+\rowcolor{lightgraybg}
+\textbf{Location} & TBD --- Classroom, Level 2, Zone 3 / Sidang Room \\
+\end{tabularx}
+
 \vspace{0.5em}
+
+\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+
+\begin{longtable}{
+    |>{\centering\arraybackslash}p{0.7cm}
+    |>{\raggedright\arraybackslash}p{8.2cm}
+    |>{\raggedright\arraybackslash}p{5.0cm}|
+}
+\hline
+\rowcolor{conf}
+\color{white}\textbf{No.} &
+\color{white}\textbf{Paper Title} &
+\color{white}\textbf{Authors} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{conf}
+\color{white}\textbf{No.} &
+\color{white}\textbf{Paper Title} &
+\color{white}\textbf{Authors} \\
+\hline
+\endhead
+
+1 &
+\textit{Latviz: A Process Visualization for ML-KEM, ML-DSA, and Lattice-Based Cryptanalysis Using LLL and BKZ} &
+Jeslyn Theodora; Muhammad Imam Chaidar Mujaddid Al-Ghiffari; Amril Syalim \newline
+\textcolor{gray}{Universitas Indonesia} \\
+\hline
+
+2 &
+\textit{Channel-Aware Backdoor Attacks Against Federated Infostealer Malware Classification Using Dynamic API-Call and Network Representations} &
+Mochamad Asryl Aziz \newline
+\textcolor{gray}{BPS Bantaeng}; Moh. Jabir Mubarok \newline
+\textcolor{gray}{Institut Teknologi Sepuluh Nopember}; Eka Fitria \newline
+\textcolor{gray}{Universitas Syiah Kuala} \\
+\hline
+
+3 &
+\textit{Real-Time Security Monitoring Hub with Telegram Bot API Integration for Instant Threat Alerting in a Laravel-Based Corporate Web Application} &
+Yakhof Kalladzi Mustohar Bahaudin \newline
+\textcolor{gray}{President University} \\
+\hline
+
+4 &
+\textit{A Human-in-the-Loop Approach to Capturing the Challenges Posed by Hidden Online Gambling Promotion Sites in Indonesia} &
+Abdul Azzam Ajhari \newline
+\textcolor{gray}{Universitas Indonesia / UNSIA}; Rizal Fathoni Aji; Aprinaldi Jasa Mantau; Wisnu Jatmiko \newline
+\textcolor{gray}{Universitas Indonesia} \\
+\hline
+
+5 &
+\textit{Analysis and Implementation of the Lattice-Based Quantum-Resistant Digital Signature Algorithm CRYSTALS-Dilithium} &
+Dhafin Fadhlan Kamal \newline
+\textcolor{gray}{Universitas Indonesia} \\
+\hline
+\end{longtable}
+\normalsize
+
+% ------------------------------------------------------------
+% Parallel Session 2
+% ------------------------------------------------------------
+\clearpage
+\subsection*{\color{conf}Parallel Session 2: NLP \& Analytics}
+
+\begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{3.4cm}
+    >{\raggedright\arraybackslash}X
+}
+\rowcolor{lightgraybg}
+\textbf{Time} & 10:00--11:45 GMT+7 \\
+
+\rowcolor{lightgraybg}
+\textbf{Session Chair} & TBD \\
+
+\rowcolor{lightgraybg}
+\textbf{Location} & TBD --- Classroom, Level 2, Zone 3 / Sidang Room \\
+\end{tabularx}
+
+\vspace{0.5em}
+
+\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+
+\begin{longtable}{
+    |>{\centering\arraybackslash}p{0.7cm}
+    |>{\raggedright\arraybackslash}p{8.2cm}
+    |>{\raggedright\arraybackslash}p{5.0cm}|
+}
+\hline
+\rowcolor{conf}
+\color{white}\textbf{No.} &
+\color{white}\textbf{Paper Title} &
+\color{white}\textbf{Authors} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{conf}
+\color{white}\textbf{No.} &
+\color{white}\textbf{Paper Title} &
+\color{white}\textbf{Authors} \\
+\hline
+\endhead
+
+1 &
+\textit{Geospatial Sentiment Analysis and Interactive Mapping of Hospital Services Using Support Vector Machine} &
+Boutefhika Nuha Ziyadatul Khair; Andika Neviantoro; Sudianto \newline
+\textcolor{gray}{Telkom University} \\
+\hline
+
+2 &
+\textit{Geographic Sentiment Patterns and Venue-Level Variability in Cafe Reviews Using Machine Learning} &
+Jordan Angkawijaya; Naswa Malika Putri; Sudianto \newline
+\textcolor{gray}{Telkom University} \\
+\hline
+
+3 &
+\textit{Do AI Models Reflect Indonesian Values? A Probe-Based Audit of Collectivism-Individualism Bias in Foundation Models} &
+Abdul Aziz; Muhammad Hatta Eka Putra; Aris Budi Santoso; Indra Budi \newline
+\textcolor{gray}{Universitas Indonesia} \\
+\hline
+
+4 &
+\textit{Interpretable Detection of Psychological Distress Tendency on Reddit Using Hybrid Linguistic and DSM-5 Features with MentalBERT} &
+Supriadi; Ika Alfina; Evi Yulianti; Grafika Jati; Wisnu Jatmiko \newline
+\textcolor{gray}{Universitas Indonesia; University of Bologna, FEV, Italy} \\
+\hline
+
+5 &
+\textit{A Comparative Study of Pretrained Language Models Under Varying Training Data Sizes for Sentiment Analysis in Indonesian Local Languages} &
+Willy Wilsen; Ika Alfina; Evi Yulianti; Nur Hamid; Wisnu Jatmiko \newline
+\textcolor{gray}{Universitas Indonesia; King Fahd University of Petroleum and Minerals} \\
+\hline
+\end{longtable}
+\normalsize
+
+% ------------------------------------------------------------
+% Parallel Session 3
+% ------------------------------------------------------------
+\clearpage
+\subsection*{\color{conf}Parallel Session 3: Computer Vision, Data Structure \& Governance}
+
+\begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{3.4cm}
+    >{\raggedright\arraybackslash}X
+}
+\rowcolor{lightgraybg}
+\textbf{Time} & 10:00--11:45 GMT+7 \\
+
+\rowcolor{lightgraybg}
+\textbf{Session Chair} & Erdefi Rakun --- not yet confirmed \\
+
+\rowcolor{lightgraybg}
+\textbf{Location} & TBD --- Classroom, Level 2, Zone 3 / Sidang Room \\
+\end{tabularx}
+
+\vspace{0.5em}
+
+\small
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+
+\begin{longtable}{
+    |>{\centering\arraybackslash}p{0.7cm}
+    |>{\raggedright\arraybackslash}p{8.2cm}
+    |>{\raggedright\arraybackslash}p{5.0cm}|
+}
+\hline
+\rowcolor{conf}
+\color{white}\textbf{No.} &
+\color{white}\textbf{Paper Title} &
+\color{white}\textbf{Authors} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor{conf}
+\color{white}\textbf{No.} &
+\color{white}\textbf{Paper Title} &
+\color{white}\textbf{Authors} \\
+\hline
+\endhead
+
+1 &
+\textit{Blockchain Adoption Challenges in Finance: A Comparative Study of Banking and Insurance Sectors} &
+Isyrofi Susianto \newline
+\textcolor{gray}{Universitas Indonesia}; Geri Yesa Ermawan \newline
+\textcolor{gray}{Politeknik Statistika STIS}; Setiadi Yazid \newline
+\textcolor{gray}{Universitas Indonesia} \\
+\hline
+
+2 &
+\textit{Table Detection in Document Images with Borderless and Partially Ruled Layouts: A Step Toward Table Understanding} &
+Alvin Sarraga; Alon Adamson \newline
+\textcolor{gray}{University of De La Salle} \\
+\hline
+
+3 &
+\textit{Attention-Enhanced Dense U-Net for Road and Building Segmentation in High-Resolution Aerial Imagery} &
+Gilang Mantara Putra \newline
+\textcolor{gray}{Universitas Indonesia}; Muhammad Anwar Masum \newline
+\textcolor{gray}{Adelaide University}; Laksmita Rahadianti; Aniati M. Arymurthy; Wisnu Jatmiko \newline
+\textcolor{gray}{Universitas Indonesia} \\
+\hline
+
+4 &
+\textit{Agentic AI on National Digital Identity Big Data: Extending the FrontCRM Framework for Citizen Relationship Management} &
+Wira Perdana; Muhammad Nuh Al Azhar; Eko K. Budiardjo; Wisnu Jatmiko \newline
+\textcolor{gray}{Universitas Indonesia} \\
+\hline
+
+5 &
+\textit{Model-Based Parameter Optimization for Bloom Filter and Cuckoo Filter Under Dynamic Workloads} &
+Nyoman Purnama \newline
+\textcolor{gray}{Universitas Primakara}; Sudarma Made; Nyoman Putra Sastra; Dewa Wiharta \newline
+\textcolor{gray}{Udayana University} \\
+\hline
+\end{longtable}
+\normalsize
+
+% ====================
+% Presenter Guidelines
+% ====================
+\clearpage
+\section*{\textbf{Guidelines for Presenters}}
+\color{conf}\rule{\linewidth}{1pt}\color{black}
+\vspace{0.8em}
+
+\subsection*{\color{conf}1. Presentation Time and Format}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Presentation duration.} Each paper is allocated a total of
+    \textbf{20 minutes}, comprising 15 minutes for the presentation and
+    5 minutes for questions, answers, and transition.
+
+    \item \textbf{Language.} All presentations and presentation slides must be
+    delivered in English.
+
+    \item \textbf{Slide format.} Please prepare your presentation slides in
+    \textbf{16:9 widescreen} aspect ratio.
+\end{itemize}
+
+\vspace{0.8em}
+
+\subsection*{\color{conf}2. Onsite Presenters}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Reporting time.} Arrive at your assigned session room at least
+    \textbf{10--15 minutes} before the scheduled session starts.
+
+    \item \textbf{Session check-in.} Introduce yourself to the Session Chair and
+    test your presentation before the session begins.
+
+    \item \textbf{Available equipment.} A laptop, projector, and audio system
+    will be provided in each session room.
+
+    \item \textbf{File submission.} Copy your final presentation file in PDF or
+    PowerPoint (\texttt{.pptx}) format to the session-room laptop using a USB
+    drive before the session begins or during the preceding break.
+\end{itemize}
+
+\vspace{0.8em}
+
+\subsection*{\color{conf}3. Virtual Presenters}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Platform.} Virtual presentations will be conducted through Zoom.
+
+    \item \textbf{Pre-session setup.} Join the assigned Zoom room at least
+    \textbf{10 minutes} before your session to test your microphone, camera,
+    and screen-sharing function.
+
+    \item \textbf{Display name.} Use the following Zoom display-name format:
+    \texttt{Paper ID - Presenter Name}. For example:
+    \texttt{101 - Jane Doe}.
+
+    \item \textbf{Technical readiness.} Use a stable internet connection, a quiet
+    presentation environment, and a properly functioning headset or microphone.
+\end{itemize}
+
+% ====================
+% Session Chair Guidelines
+% ====================
+\clearpage
+\section*{\textbf{Guidelines for Session Chairs}}
+\color{conf}\rule{\linewidth}{1pt}\color{black}
+\vspace{0.8em}
+
+\subsection*{\color{conf}1. Before the Session}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Check-in.} Arrive at the assigned session room for onsite
+    participation, or join the Zoom room for virtual participation, at least
+    \textbf{15 minutes} before the session begins.
+
+    \item \textbf{Presenter attendance.} Verify that all presenters assigned to
+    the session are present, including both onsite and virtual presenters.
+
+    \item \textbf{Presentation materials.} Ensure that onsite presentation files
+    are available on the session-room computer.
+
+    \item \textbf{Virtual readiness.} Confirm that virtual presenters have been
+    granted the necessary co-host and/or screen-sharing permissions.
+\end{itemize}
+
+\vspace{0.8em}
+
+\subsection*{\color{conf}2. During the Session}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Introduction.} Open the session promptly at the scheduled time,
+    announce the session topic, and introduce each presenter before their talk.
+
+    \item \textbf{Time management.} Maintain the allocation of \textbf{20 minutes}
+    per paper: 15 minutes for the presentation and 5 minutes for questions,
+    answers, and transition.
+
+    \item \textbf{Time warnings.} Give each presenter clear time reminders, for
+    example when three minutes and one minute remain.
+
+    \item \textbf{Schedule discipline.} Do not allow presentations to exceed the
+    allocated time, in order to preserve fairness and maintain the published
+    schedule.
+
+    \item \textbf{Question-and-answer moderation.} Facilitate questions from both
+    onsite participants and virtual attendees, including questions submitted
+    through Zoom chat or raised-hand features.
+
+    \item \textbf{Backup question.} If no questions are raised by the audience,
+    prepare at least one relevant question for the presenter.
+\end{itemize}
+
+\vspace{0.8em}
+
+\subsection*{\color{conf}3. No-Shows and Cancellations}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Fixed schedule.} Do not advance the start times of subsequent
+    presentations when an author is absent or a paper is cancelled.
+
+    \item \textbf{Use of vacant slots.} Maintain the official schedule so that
+    participants joining for a specific paper can attend at the announced time.
+    A vacant slot may be used for a short discussion or recess.
+\end{itemize}
+
+\vspace{0.8em}
+
+\subsection*{\color{conf}4. After the Session}
+
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Attendance and evaluation.} Record presenter attendance and
+    complete the Session Evaluation and Best Presenter Recommendation form
+    provided by the committee.
+
+    \item \textbf{Closing.} Thank the presenters and audience, then formally
+    conclude the session.
+\end{itemize}
 
 % ======== End Cover
 \newpage
@@ -748,7 +1584,7 @@ We do not provide printed proceeding onsite, please contact us if you need one. 
 \begin{tikzpicture}[remember picture, overlay]
    \node[anchor=north, text width=150mm, align=center]
     at ([yshift=-70mm]current page.north)
-    {\Huge\bfseries ICACSIS \\[0.5cm]  2026};
+    {\Huge\bfseries IWBIS \\[0.5cm]  2026};
 
   \node[anchor=north west, text width=60mm, align=left]
     at ([xshift=2cm,yshift=-21.5cm]current page.north west)
@@ -758,8 +1594,8 @@ We do not provide printed proceeding onsite, please contact us if you need one. 
     Kampus UI Depok, Indonesia 16424\\
     Telp: +62 21 786 3419\\
     Fax: +62 21 786 3415\\
-    Email: icacsis@cs.ui.ac.id\\
-    Website: icacsis.cs.ui.ac.id
+    Email: iwbis@cs.ui.ac.id\\
+    Website: iwbis.cs.ui.ac.id
     };
 \end{tikzpicture}
 
