@@ -26,12 +26,18 @@
 \definecolor{lightgraybg}{gray}{0.94}
 \definecolor{linkblue}{RGB}{0, 102, 204}
 \definecolor{tocblack}{RGB}{0,0,0}
+
 % Set up hyperref styling
 \hypersetup{
     colorlinks=true,
     urlcolor=linkblue
 }
 
+% Compilation timestamp
+\usepackage[
+    showseconds=false,
+    showzone=true
+]{datetime2}
 
 \usepackage[a4paper, margin=1.8cm, top=1cm, headheight=1cm, headsep=20pt, includehead]{geometry}
 \usepackage{graphicx}
@@ -208,6 +214,14 @@
 \end{tabularx}
 \end{center}
 
+\vspace{0.5em}
+
+\begin{center}
+    {\footnotesize\textcolor{gray}{%
+        Last compiled: \DTMnow
+    }}
+\end{center}
+
 % ============================================================
 % IWBIS 2026 Program Schedule
 % ============================================================
@@ -229,8 +243,10 @@
 % ============================================================
 % LEFT COLUMN -- Registration Days
 % ============================================================
-
-\subsection*{\underline{Day 1 -- Friday, 16 Oct}}
+\subsection*{%
+    \colorbox{gray!20}{Day 1 -- Friday, 16 Oct}%
+}
+% \subsection*{\underline{Day 1 -- Friday, 16 Oct}}
 
 \textbf{13:30 -- 16.30}\\
 IWBIS Participant Registration\\
@@ -241,7 +257,10 @@ Registration Information\\
 
 \vspace{1.5em}
 
-\subsection*{\underline{Day 2 -- Saturday, 17 Oct}}
+\subsection*{%
+    \colorbox{gray!20}{Day 2 -- Saturday, 17 Oct}%
+}
+% \subsection*{\underline{Day 2 -- Saturday, 17 Oct}}
 
 \textbf{07:00 -- 16.10}\\
 IWBIS Participant Registration\\
@@ -250,7 +269,11 @@ IWBIS Participant Registration\\
 Registration Information\\
 \textcolor{gray}{Participants who have not registered on Day 1 may complete registration before the main IWBIS program.}\\[0.5em]
 
-\vspace{1.5em}
+\textbf{17.10 -- 21.30}\\
+Gala Dinner\\
+\textcolor{gray}{2nd Floor Corridor near Auditorium Indro Suwandi}
+
+\vspace{11em}
 
 \subsection*{Registration Notes}
 
@@ -271,7 +294,10 @@ Faculty of Computer Science, Universitas Indonesia}\\[0.5em]
 % RIGHT COLUMN -- Main IWBIS Program
 % ============================================================
 
-\subsection*{\underline{Day 3 -- Sunday, 18 Oct}}
+\subsection*{%
+    \colorbox{gray!20}{Day 3 -- Sunday, 18 Oct}%
+}
+% \subsection*{\underline{Day 3 -- Sunday, 18 Oct}}
 
 \textbf{08:00 -- 08:45}~~Registration\\
 {Registration Desk Open}\\
